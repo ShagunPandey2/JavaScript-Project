@@ -10,7 +10,7 @@
 <body> 
     <div class="main"> 
         <h1>Bounteous x Accolite</h1> 
-        <form action=""> 
+        <form action="" onsubmit="solve();return false"> 
             <label for="first">Name:</label> 
             <input type="text" id="first" 
                    name="first" 
@@ -67,7 +67,7 @@
             </div> 
             <div class="wrap">
               <input type="text" id="mail" placeholder="Enter Your Mail">
-              <button type="button" onclick="getdetails()">GET</button>
+              <button type="button" value="get details" onclick="getdetails()">GET</button>
             </div>
         </form> 
     </div> 
