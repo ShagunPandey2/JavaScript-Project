@@ -1,6 +1,6 @@
-let details=[]
+window.details=[]
 function solve() { 
-    let name=getElementById('first').value;
+    let name=document.getElementById('first').value;
     let password =  
         document.getElementById('password').value; 
     let repassword =  
@@ -45,23 +45,31 @@ function solve() {
     } 
     if (flag) 
         alert("Form submitted"); 
-    let detail={
-        name:name,
-        mail:maill
-        
-
-    };
-        details.push(detail);
-        alert("details");
-        console.log(details)
+        let detail={
+            name:name,
+            mail:maill
+            
+    
+        };
+        window.details.push(detail)
+        alert(JSON.stringify(window.details));
+        console.log(window.details)
+        flag-=0;
+    
+    
 }
 function getdetails(){
-    const mail=document.getElementById('mail').value
+    let mail=document.getElementById('mail').value;
+    alert(mail);
     let detail=null;
-    for(let i=0;i<details.length;i++)
+    alert(JSON.stringify(window.details));
+    for(let i=0;i<window.details.length;i++)
+
     {
-        if(student[i]['mail']===mail){
-            detail=details[i];
+        console.log(window.details[i]['mail']);
+        if(window.details[i]['mail']===mail){
+            detail=window.details[i];
+            alert(detail)
             break;
         }
     }
